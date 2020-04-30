@@ -1,5 +1,7 @@
 # SqlQueries-USflights
 
+https://docs.google.com/document/d/1TIyZS2EVDm_YtVAfbtelRBuihhkULgAqMy33gcsbg2s/edit#
+
 MySQL Queries
 Instal·lació:
 Tenir MySQL Workbench instal·lat Link o el Xampp
@@ -34,13 +36,10 @@ Les consultes són les següents:
 
 Quantitat de registres de la taula de vols:
 
-Resultat: 
-
 
 Retard promig de sortida i arribada segons l’aeroport origen.
 
     
-
 
 Retard promig d’arribada dels vols, per mesos, anys i segons l’aeroport origen. A més, volen que els resultat es mostrin de la següent forma (fixa’t en l’ordre de les files):
 LAX, 2000, 01, 10
@@ -55,23 +54,15 @@ ONT, 2000, 01, 6
 ONT, 2000, 02, 3
 etc.
 
-Resultat:
-
 
 Retard promig d’arribada dels vols, per mesos, anys i segons l’aeroport origen (mateixa consulta que abans i amb el mateix ordre). Però a més, ara volen que en comptes del codi de l’aeroport es mostri el nom de la ciutat.
-Resultat:
-
 
 
 Les companyies amb més vols cancelats, per mesos i any. A més, han d’estar ordenades de forma que les companyies amb més cancel·lacions apareguin les primeres.
 
-Resultat:
-
 
 L’identificador dels 10 avions que més distància han recorregut fent vols.
 
-    Resultat:
 
 Companyies amb el seu retard promig només d’aquelles les quals els seus vols arriben al seu destí amb un retràs promig major de 10 minuts.
-
-    Resultat:                                                                                                                                                   a        º
+                                                                                                                                                a        º

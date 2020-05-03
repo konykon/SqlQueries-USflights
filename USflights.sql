@@ -1,33 +1,33 @@
 SELECT COUNT(*)
 FROM Flights;
 
-SELECT Origin, AVG(ArrDelay) AS avgDelayArrivals, AVG(DepDelay) AS avgDelayDepartures
+SELECT Origin, AVG(ArrDelay) AS AvgDelayArrivals, AVG(DepDelay) AS AvgDelayDepartures
 FROM Flights
 GROUP BY Origin;
 
-SELECT Origin, colYear, ColMonth, AVG(ArrDelay) AS avgDelayDepartures
+SELECT Origin, ColYear, ColMonth, AVG(ArrDelay) AS AvgDelayDepartures
 FROM Flights
-GROUP BY Origin, ColYear, colMonth					
-ORDER BY Origin ASC, colYear ASC, ColMonth ASC;
+GROUP BY Origin, ColYear, ColMonth					
+ORDER BY Origin ASC, ColYear ASC, ColMonth ASC;
 
-SELECT City, colYear, ColMonth, AVG(ArrDelay) AS avgDelayArrivals
+SELECT City, ColYear, ColMonth, AVG(ArrDelay) AS AvgDelayArrivals
 FROM Flights INNER JOIN USairports ON IATA = Origin
-GROUP BY City, ColYear, colMonth
-ORDER BY City ASC, colYear ASC, ColMonth ASC;
+GROUP BY City, ColYear, ColMonth
+ORDER BY City ASC, ColYear ASC, ColMonth ASC;
 
-SELECT UniqueCarrier, colYear, ColMonth, SUM(Cancelled) AS totalCancelled
+SELECT UniqueCarrier, ColYear, ColMonth, SUM(Cancelled) AS TotalCancelled
 FROM Flights 
-GROUP BY UniqueCarrier, ColYear, colMonth
+GROUP BY UniqueCarrier, ColYear, ColMonth
 HAVING SUM(Cancelled)>=1									
-ORDER BY totalCancelled DESC;
+ORDER BY TotalCancelled DESC;
 
-SELECT TailNum, SUM(Distance) AS totalDistance
+SELECT TailNum, SUM(Distance) AS TotalDistance
 FROM Flights
 GROUP BY TailNum
-ORDER BY totalDistance DESC
+ORDER BY TotalDistance DESC
 LIMIT 10;
 
-SELECT UniqueCarrier, AVG(ArrDelay) AS avgDelay
+SELECT UniqueCarrier, AVG(ArrDelay) AS AvgDelayArrivals
 FROM Flights
 GROUP BY UniqueCarrier HAVING AVG(ArrDelay) > 10
-ORDER BY AvgDelay DESC
+ORDER BY AvgDelayArrivals DESC
